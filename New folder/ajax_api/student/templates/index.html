@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Ho ten: </label> <input type="text" class="name"> <br>
+        <label for="">Tuoi: </label> <input type="text" class="age"> <br>
+        <label for="">Gioi tinh: </label> <input type="text" class="sex"> <br>
+        <input type="button" class="abc" value="POST">
+    </form>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script>
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                function getCookie(name) {
+                    var cookieValue = null;
+                    if (document.cookie && document.cookie != '') {
+                        var cookies = document.cookie.split(';');
+                        for (var i = 0; i < cookies.length; i++) {
+                            var cookie = jQuery.trim(cookies[i]);
+                            // Does this cookie string begin with the name we want?
+                            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                break;
+                            }
+                        }
+                    }
+                    return cookieValue;
+                }
+                if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                    // Only send the token to relative URLs i.e. locally.
+                    xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                }
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.abc').click(function () {
+                name = $('.name').val(),
+                    age = $('.age').val(),
+                    sex = $('.sex').val(),
+                    mydata = JSON.stringify({
+                        hoten: name,
+                        tuoi: age,
+                        gioitinh: sex,
+                    });
+                console.log(mydata);
+                $.ajax({
+                    type: "POST",
+                    url: '/student/',
+                    data: mydata,
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function () {
+                        alert('them hoan hao');
+                    }
+                }).fail(function () {
+                    alert('Error');
+                });
+            });
+        });
+    </script> -->
+</body>
+
+</html>
